@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supermarket Sales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    >
+</head>
+<body class="bg-light">
+<div class="container py-4">
+
+  <h1 class="text-center mb-4">Supermarket Sales Dashboard</h1>
+
+  <!-- Row 1 -->
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('monthly_sales') }}">
+          <img src="/static/Monthly Sales.png" class="card-img-top" alt="Monthly Sales">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Monthly Sales</h5>
+          <p class="card-text">Monthly total sales performance with trends over time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('payment_method') }}">
+          <img src="/static/Payment Method.png" class="card-img-top" alt="Payment Method">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Payment Method</h5>
+          <p class="card-text">Breakdown of total sales by customer payment methods.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('quantity_sold_per_product') }}">
+          <img src="/static/Quantity Sold per Product Line.png" class="card-img-top" alt="Quantity Sold per Product Line">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Quantity Sold per Product Line</h5>
+          <p class="card-text">Shows which product lines are performing best in terms of volume.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('quantity_sold_per_weekday') }}">
+          <img src="/static/Quantity Sold per Weekday.png" class="card-img-top" alt="Quantity Sold per Weekday">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Quantity Sold per Weekday</h5>
+          <p class="card-text">Analyzes which days of the week have the highest sales activity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('revenue_per_month') }}">
+          <img src="/static/Revenue per Month.png" class="card-img-top" alt="Revenue per Month">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Revenue per Month</h5>
+          <p class="card-text">Shows total revenue generated for each month of the year.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('revenue_per_product') }}">
+          <img src="/static/Revenue per Product.png" class="card-img-top" alt="Revenue per Product">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Revenue per Product</h5>
+          <p class="card-text">Displays revenue contribution per product type or category.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('sales_per_day') }}">
+          <img src="/static/Sales per Day.png" class="card-img-top" alt="Sales per Day">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Sales per Day</h5>
+          <p class="card-text">Daily sales totals showing short-term performance trends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="{{ url_for('sales_region') }}">
+          <img src="/static/Sales Region.png" class="card-img-top" alt="Sales by Region">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Sales by Region</h5>
+          <p class="card-text">Geographic breakdown of sales by region or store location.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

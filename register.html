@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Supermarket Sales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous"
+    >
+</head>
+<body>
+<main class="form-signin w-100 m-auto" style="max-width: 400px; padding: 2rem;">
+  <form method="POST" action="{{ url_for('register') }}">
+      <img class="mb-4"
+           src="/static/Supermarket Sales.png"
+           alt=""
+           width="300"
+           height="180">
+      <h1>Supermarket Sales</h1>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingUsername" name="username" placeholder="Username" required>
+      <label for="floatingUsername">Username</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" required>
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingConfirmPassword" name="confirm" placeholder="Confirm Password" required>
+      <label for="floatingConfirmPassword">Confirm Password</label>
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
+
+    <p>Already have an account? <a href="{{ url_for('home')}}">Login</a></p>
+    <p class="mt-5 mb-3 text-body-secondary text-center">© Supermarket Sales 2025</p>
+  </form>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ 'danger' if category == 'error' else category }} mt-3" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</main>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MRCjvmC3tzg0N1PzyR+YUf7Z6qSlbY+epbDZJ1V0p2UPX6zvytztvR7Z2Ecl0u6R"
+  crossorigin="anonymous">
+</script>
+</body>
+</html>
